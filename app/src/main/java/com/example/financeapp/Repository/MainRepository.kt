@@ -1,5 +1,6 @@
 package com.example.financeapp.Repository
 
+import com.example.financeapp.Domain.BudgetDomain
 import com.example.financeapp.Domain.ExpenseDomain
 
 class MainRepository {
@@ -8,5 +9,10 @@ class MainRepository {
         ExpenseDomain("McDonald", 77.82, "mcdonald", "16 Jun 2026 13:57"),
         ExpenseDomain("Cinema", 23.47, "cinema", "16 Jun 2026 20:45"),
         ExpenseDomain("Restaurant", 573.12, "restaurant", "17 Jun 2026 22:18"),
+    )
+    val budget = mutableListOf(
+        BudgetDomain("Home Load", 1200.0, 80.0),
+        BudgetDomain("Subcription", 550.0, 10.0),
+        BudgetDomain("Car Loan", 800.0, 30.0),
     )
 }
