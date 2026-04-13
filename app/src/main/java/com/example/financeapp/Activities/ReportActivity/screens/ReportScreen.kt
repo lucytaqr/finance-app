@@ -8,16 +8,20 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester.Companion.createRefs
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.example.financeapp.Activities.ReportActivity.SummaryColums
 import com.example.financeapp.Activities.ReportActivity.components.CenterStatsCard
 import com.example.financeapp.Activities.ReportActivity.components.GradientHeader
 import com.example.financeapp.Domain.BudgetDomain
+import com.example.financeapp.R
 
 @Composable
 fun ReportScreen(
@@ -76,7 +80,7 @@ fun ReportContent(
                         .fillMaxWidth()
                         .wrapContentHeight()
                         .padding(horizontal = 24.dp)
-                        .constrainAs(card){
+                        .constrainAs(card) {
                             top.linkTo(header.bottom)
                             bottom.linkTo(parent.bottom)
                             start.linkTo(parent.start)
@@ -84,6 +88,18 @@ fun ReportContent(
                         }
                 )
             }
+        }
+        item {
+            SummaryColums(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 24.dp)
+                    .background(
+                        colorResource(R.color.lightBlue),
+                        shape = RoundedCornerShape(16.dp)
+                    )
+                    .padding(8.dp)
+            )
         }
     }
 }
