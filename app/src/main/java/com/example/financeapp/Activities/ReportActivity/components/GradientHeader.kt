@@ -42,7 +42,7 @@ fun GradientHeader(modifier: Modifier = Modifier, onBack: () -> Unit) {
                 .padding(16.dp)
                 .constrainAs(backBtn) {
                     start.linkTo(parent.start, margin = 16.dp)
-                    top.linkTo(parent.top, margin = 48.dp)
+                    top.linkTo(parent.top, margin = 68.dp)
                 }
         ) {
             Icon(

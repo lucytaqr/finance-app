@@ -124,7 +124,7 @@ fun CenterStatsCard(modifier: Modifier = Modifier) {
             fontSize = 20.sp,
             modifier = Modifier
                 .padding(top = 4.dp)
-                .constrainAs(incomeValue) {
+                .constrainAs(expenseValue) {
                     start.linkTo(expenseLabel.start)
                     top.linkTo(expenseLabel.bottom)
                     end.linkTo(expenseLabel.end)
